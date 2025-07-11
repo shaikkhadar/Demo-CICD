@@ -31,10 +31,10 @@ jobs:
 
     # Optional: Push to Docker Hub
     - name: Log in to Docker Hub
-      run: docker login
+      uses: docker/login-action@v1
       with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
       
     - name: Push Docker image 
       run: |
