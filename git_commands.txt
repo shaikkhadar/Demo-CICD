@@ -1,0 +1,33 @@
+1. Create GitHub Repo
+Go to: https://github.com/new
+
+Name it house-price-api (or anything you like)
+
+Choose Public or Private
+
+Don’t initialize with README/License
+
+2. git init
+git remote add origin https://github.com/your-username/house-price-api.git
+git add .
+git commit -m "Initial commit with FastAPI and Docker"
+git branch -M main
+git push -u origin main
+
+3. mkdir -p .github/workflows
+touch .github/workflows/ci-cd.yml
+
+git add .github/workflows/ci-cd.yml
+git commit -m "Add CI/CD GitHub Actions workflow"
+git push
+
+4. Add Secrets
+Open https://github.com/soudaminigit/FastAPI_CICD
+Go to settings
+CLick on Secrets and Variables
+Click on Actions
+Add Secrets DOCKER_USERNAME and DOCKER_PASSWD
+https://github.com/soudaminigit/FastAPI_CICD/actions
+
+Force update:
+git push origin main --force
